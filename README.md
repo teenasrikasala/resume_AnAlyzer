@@ -60,4 +60,4 @@ This project helps job seekers understand how well their resumes match a target 
 ---
 ## Author
 
-### Teena Sri
+### Teena sri Kasala
