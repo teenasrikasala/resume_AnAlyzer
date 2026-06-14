@@ -1,0 +1,134 @@
+body{
+    margin:10px;
+    background-color:white;
+    font-family: Arial, sans-serif;
+}
+.container{
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 2px solid #ccc;
+     border-radius: 10px;
+}
+.header{
+    text-align: center;
+    margin-bottom: 20px;
+    border:2px solid #ccc;
+    border-radius: 10px;
+
+}
+.header h1{
+    margin-bottom: 10px;
+}
+.header p{
+   color:gray;
+}
+.card{
+    background-color:white;
+    border:2px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 20px;
+}
+textarea{
+    width:100%;
+    box-sizing: border-box;
+    resize: vertical;
+    border:1px solid #ccc;
+    border-radius: 5px;
+    font-size: 25px;
+    height: 300px;
+    padding:10px;
+}
+input[type="file"]::file-selector-button{
+    margin-top: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.btn{
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display:block;
+    margin:20px auto;
+}
+.top-section{
+    display:flex;
+    gap:20px;
+}
+.top-section .card{
+    flex:1;
+}
+.bottom-section{
+    display:flex;
+    gap:20px;
+  
+}
+.bottom-section .card{
+    display: flex;
+    gap: 15px;
+    flex: 1;
+}
+.r-card{
+    background-color:white;
+    border:2px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 20px;
+    flex:1;
+    min-width: 180px;
+    max-width: 250px;
+}
+#ats-chart{
+    max-width:120px;
+    max-height:120px;
+    margin:auto;
+}
+#ats-score{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+.matched-title{
+    background-color:white;
+    margin-bottom: 10px;
+    color:green;
+    font-size:20px;
+}
+.missed-title{
+    background-color:white;
+    margin-bottom: 10px;
+    font-size:20px;
+    color:red;
+}
+.suggestion{
+    background-color:white;
+    margin-bottom: 10px;
+    color:orange;
+    font-size:20px;
+}
+.upload-box{
+    border:2px dashed #3b82f6;
+    border-radius:10px;
+    text-align:center;
+    padding:30px;
+    margin-top: 60px;
+    background:#f8fbff;
+    margin-bottom: 20px;
+}
+#skills-matching,
+#missing-skills,
+#suggestions{
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}

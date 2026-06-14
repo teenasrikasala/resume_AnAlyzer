@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Resume Analyzer</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+    <body>
+       <div class="container"> 
+        <div class="header">
+            <h1>AI Resume Analyzer</h1>
+            <p>Upload resume to check the capability of the candidate.</p>
+        </div>
+         <form action="/analyze" method="POST" enctype="multipart/form-data">
+         <div class="top-section">
+              <div class="card">
+                <div class="upload-box">
+                    <div style="font-size: 75px;">☁️</div>
+                    <h2>1.Upload resume</h2>
+                     <p>Drag & Drop Resume Here</p>
+                    <input type="file" name="resume" accept=".pdf" required>
+              </div>
+              </div>
+             <div class="card">
+             <h2>2.Job description</h2>
+              <textarea
+                  name="job_description"
+                  rows="20"
+                  placeholder="Paste the job description here...."
+                  required>
+             </textarea>
+        </div>
+         </div>
+              <button class="btn" type="submit">🔍  Analyze Resume</button>
+            </form> 
+             <div class="card">
+                 <h2>3.Analysis result:</h2>    
+                   <div class="bottom-section"> 
+                     <div class="r-card">
+                       <h2>ATS Score:</h2>
+                       <canvas id="ats-chart"></canvas>
+                       <h5 id="ats-score">0%</h5>
+                   </div>
+                   <div class="r-card">
+                    <div class="matched-title">
+                       <h4>Skills matching:</h4>
+                       <ul id="skills-matching"></ul>
+                    </div>
+                    </div>
+                    <div class="r-card">
+                    <div class="missed-title">
+                         <h4>Missing skills:</h4>
+                         <ul id="missing-skills"></ul>
+                    </div> 
+                    </div>
+                     <div class="r-card">
+                    <div class="suggestion">   
+                         <h4>Suggestions:</h4>
+                         <ul id="suggestions"></ul>
+                    </div>  
+                    </div>    
+                  </div>
+              </div>
+              <div class="card">
+                 <h3>4.Summary:</h3>
+                 <p id="summary"></p>
+             </div>
+         </div>
+      <script src="{{url_for('static',filename='main.js')}}"></script>
+    </body>
+</html>
