@@ -8,7 +8,7 @@ body{
     margin: 30px auto;
     padding: 20px;
     border: 2px solid #ccc;
-     border-radius: 10px;
+    border-radius: 10px;
 }
 .header{
     text-align: center;
@@ -36,7 +36,7 @@ textarea{
     resize: vertical;
     border:1px solid #ccc;
     border-radius: 5px;
-    font-size: 25px;
+    font-size: 18px;
     height: 300px;
     padding:10px;
 }
@@ -85,8 +85,7 @@ input[type="file"]::file-selector-button{
     margin-bottom: 10px;
     padding: 20px;
     flex:1;
-    min-width: 180px;
-    max-width: 250px;
+    max-width: 100%;
 }
 #ats-chart{
     max-width:120px;
@@ -131,4 +130,24 @@ input[type="file"]::file-selector-button{
     list-style: none;
     padding-left: 0;
     margin: 0;
+}
+@media(max-width: 768px){
+    .top-section{
+        flex-direction: column;
+    }
+    .bottom-section{
+        flex-direction: column;
+    }
+    .r-card,
+    .matched-title,
+    .missed-title,
+    .suggestion{
+           width: 100%;
+           max-width: 100%;
+           min-width: 0;
+           box-sizing: border-box;
+    }
+    .container{
+        padding: 10px;
+    }
 }
